@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
 import './navbar-top-fixed.css';
 
 class Navbar extends Component {
