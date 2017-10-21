@@ -3,9 +3,15 @@ import Card from './Card';
 
 class Col extends Component {
   render() {
+    let el = null
+    const component = this.props.component
+    if (component && component.type === 'Card') {
+      const value = component.value
+      el = <Card imgSrc={value.imgSrc} imgAlt={value.imgSrc} text={value.text}/>
+    }
     return (
       <div className="col">
-        <Card imgSrc="https://picsum.photos/320/240/?random" imgAlt="image" text="Some quick example text to build on the card title and make up the bulk of the card's content." />
+        {el}
       </div>
     );
   }
