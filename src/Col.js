@@ -14,7 +14,7 @@ class Col extends Component {
     this.state.components.map((component,index)=>{
       if (!component) return elements
       if (component.type === 'Card') {
-        const element = <Card imgSrc={component.imgSrc} imgAlt={component.imgSrc} text={component.text}/>
+        const element = <Card key={index} imgSrc={component.imgSrc} imgAlt={component.imgSrc} text={component.text}/>
         elements.push(element)
       }
       return elements

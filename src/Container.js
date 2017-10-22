@@ -25,6 +25,12 @@ class Container extends Component {
           imgSrc: 'https://picsum.photos/320/240/?random',
           imgAlt: '',
           text: randomSentence()
+        },
+        {
+          type: 'Card',
+          imgSrc: 'https://picsum.photos/320/240/?random',
+          imgAlt: '',
+          text: randomSentence()
         }
       ]
     };
@@ -33,7 +39,6 @@ class Container extends Component {
     return (
       <main role="main" className="container">
         <Jumbotron title="React 16 &times; Bootstrap 4" lead={randomSentence()} />
-
         <Row components={this.state.components} />
       </main>
     );
