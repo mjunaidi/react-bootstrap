@@ -13,7 +13,7 @@ class CardDeck extends Component {
   }
   componentDidMount() {
     const elements = []
-    this.state.components.slice(this.state.begin,this.state.begin+this.state.size).map((c,i)=>{
+    this.state.components.map((c,i)=>{
       if (!c) return elements
       if (c.type === 'Card') {
         const el = (
@@ -34,7 +34,7 @@ class CardDeck extends Component {
   }
   render() {
     return (
-      <div className="card-deck mb-3">
+      <div className="card-deck">
         {
           this.state.elements.map((element,index)=>(element))
         }

@@ -12,3 +12,17 @@
 .card>.card-body>.card-text{
   margin-bottom:0.2rem;
 }
+
+
+.card-deck{
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+.card-deck>.card{
+  flex: 0 0 33.333333%;
+  max-width: 32.333333%;
+  margin-bottom: 1rem;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}

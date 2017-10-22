@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Jumbotron from './Jumbotron';
+import Row from './Row';
 import CardDeck from './CardDeck';
 import { randomSentence,timeAgo,randomDate } from './util';
 import './style.css';
@@ -59,8 +60,12 @@ class Container extends Component {
     return (
       <main role="main" className="container">
         <Jumbotron title="React 16 &times; Bootstrap 4" lead={randomSentence()} />
+
+        <h4>CardDeck</h4>
         <CardDeck components={this.state.components} />
-        <CardDeck components={this.state.components} begin="3" size="3" />
+
+        <h4>Row, Col</h4>
+        <Row col={3} components={this.state.components} />
       </main>
     );
   }
