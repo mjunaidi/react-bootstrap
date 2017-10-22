@@ -6,7 +6,8 @@ class Col extends Component {
     super(props);
     this.state = {
       components: props.components,
-      elements: []
+      elements: [],
+      col: props.col||1
     };
   }
   componentDidMount() {
@@ -23,7 +24,7 @@ class Col extends Component {
   }
   render() {
     return (
-      <div className="col">
+      <div className={'col-'+(12/this.state.col)}>
         {
           this.state.elements.map((element,index)=>(element))
         }

@@ -1,5 +1,5 @@
 export function randomSentence() {
-  const l = randomInt(15,25)
+  const l = randomInt(5,15)
   let s = randomWord()
   s = s.charAt(0).toUpperCase() + s.slice(1);
   for (let i=1;i<l;i++) {
