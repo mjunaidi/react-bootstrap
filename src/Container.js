@@ -13,7 +13,7 @@ class Container extends Component {
           type: 'Card',
           imgSrc: 'https://picsum.photos/320/240/?random',
           imgAlt: '',
-          title: randomSentence(3,5,true),
+          title: randomSentence(3,5,false),
           text: randomSentence(),
           updated: Date.now()
         },
@@ -21,7 +21,7 @@ class Container extends Component {
           type: 'Card',
           imgSrc: 'https://picsum.photos/320/240/?random',
           imgAlt: '',
-          title: randomSentence(3,5,true),
+          title: randomSentence(3,5,false),
           text: randomSentence(),
           updated: Date.now()
         },
@@ -29,7 +29,7 @@ class Container extends Component {
           type: 'Card',
           imgSrc: 'https://picsum.photos/320/240/?random',
           imgAlt: '',
-          title: randomSentence(3,5,true),
+          title: randomSentence(3,5,false),
           text: randomSentence(),
           updated: Date.now()
         },
@@ -37,7 +37,7 @@ class Container extends Component {
           type: 'Card',
           imgSrc: 'https://picsum.photos/320/240/?random',
           imgAlt: '',
-          title: randomSentence(3,5,true),
+          title: randomSentence(3,5,false),
           text: randomSentence(),
           updated: Date.now()
         },
@@ -45,7 +45,7 @@ class Container extends Component {
           type: 'Card',
           imgSrc: 'https://picsum.photos/320/240/?random',
           imgAlt: '',
-          title: randomSentence(3,5,true),
+          title: randomSentence(3,5,false),
           text: randomSentence(),
           updated: Date.now()
         }
