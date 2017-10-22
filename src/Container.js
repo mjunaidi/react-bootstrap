@@ -3,12 +3,37 @@ import Jumbotron from './Jumbotron';
 import Row from './Row';
 
 class Container extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      components: {
+        type: 'Card',
+        values: [
+          {
+            imgSrc: 'https://picsum.photos/320/240/?random',
+            imgAlt: '',
+            text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+          },
+          {
+            imgSrc: 'https://picsum.photos/320/240/?random',
+            imgAlt: '',
+            text: 'Lorem ipsum'
+          },
+          {
+            imgSrc: 'https://picsum.photos/320/240/?random',
+            imgAlt: '',
+            text: 'dolor sit amet'
+          }
+        ]
+      }
+    };
+  }
   render() {
     return (
       <main role="main" className="container">
         <Jumbotron title="React 16 &times; Bootstrap 4" lead="Something..." />
 
-        <Row />
+        <Row components={this.state.components} />
       </main>
     );
   }

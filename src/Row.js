@@ -4,32 +4,14 @@ import Col from './Col';
 class Row extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      cards: [
-        {
-          imgSrc: 'https://picsum.photos/320/240/?random',
-          imgAlt: '',
-          text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
-        },
-        {
-          imgSrc: 'https://picsum.photos/320/240/?random',
-          imgAlt: '',
-          text: 'Lorem ipsum'
-        },
-        {
-          imgSrc: 'https://picsum.photos/320/240/?random',
-          imgAlt: '',
-          text: 'dolor sit amet'
-        }
-      ]
-    };
+    this.state = {components: props.components};
   }
   render() {
     return (
       <div className="row">
         {
-          this.state.cards.map((card,i)=>(
-            <Col key={i} component={{type:'Card',value:card}} />
+          this.state.components.values.map((component,i)=>(
+            <Col key={i} component={{type:this.state.components.type, value:component}} />
           ))
         }
       </div>
