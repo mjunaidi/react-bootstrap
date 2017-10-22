@@ -2,16 +2,31 @@ import React, { Component } from 'react';
 import Card from './Card';
 
 class Col extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      components: props.components,
+      elements: []
+    };
+  }
+  componentDidMount() {
+    const elements = []
+    this.state.components.map((component,index)=>{
+      if (!component) return elements
+      if (component.type === 'Card') {
+        const element = <Card imgSrc={component.imgSrc} imgAlt={component.imgSrc} text={component.text}/>
+        elements.push(element)
+      }
+      return elements
+    })
+    this.setState({elements:elements})
+  }
   render() {
-    let el = null
-    const component = this.props.component
-    if (component && component.type === 'Card') {
-      const value = component.value
-      el = <Card imgSrc={value.imgSrc} imgAlt={value.imgSrc} text={value.text}/>
-    }
     return (
       <div className="col">
-        {el}
+        {
+          this.state.elements.map((element,index)=>(element))
+        }
       </div>
     );
   }

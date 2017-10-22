@@ -10,8 +10,8 @@ class Row extends Component {
     return (
       <div className="row">
         {
-          this.state.components.values.map((component,i)=>(
-            <Col key={i} component={{type:this.state.components.type, value:component}} />
+          this.state.components.map((component,i)=>(
+            <Col key={i} components={[component]} />
           ))
         }
       </div>
