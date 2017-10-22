@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Jumbotron from './Jumbotron';
 import Row from './Row';
-import {randomWord,randomSentence} from './util';
+import { randomSentence } from './util';
 
 class Container extends Component {
   constructor(props) {
