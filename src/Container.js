@@ -22,7 +22,7 @@ class Container extends Component {
           imgSrc: 'https://picsum.photos/320/240/?random',
           imgAlt: '',
           title: randomSentence(3,5,false),
-          text: randomSentence(50,60),
+          text: randomSentence(),
           updated: timeAgo(randomDate(2017,2018))
         },
         {
