@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Jumbotron from './Jumbotron';
 import Row from './Row';
+import {randomWord,randomSentence} from './util';
 
 class Container extends Component {
   constructor(props) {
@@ -12,17 +13,17 @@ class Container extends Component {
           {
             imgSrc: 'https://picsum.photos/320/240/?random',
             imgAlt: '',
-            text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+            text: randomSentence()
           },
           {
             imgSrc: 'https://picsum.photos/320/240/?random',
             imgAlt: '',
-            text: 'Lorem ipsum'
+            text: randomSentence()
           },
           {
             imgSrc: 'https://picsum.photos/320/240/?random',
             imgAlt: '',
-            text: 'dolor sit amet'
+            text: randomSentence()
           }
         ]
       }
