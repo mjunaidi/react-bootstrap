@@ -1,11 +1,11 @@
-export function randomSentence() {
-  const l = randomInt(5,15)
+export function randomSentence(min,max,noPeriod) {
+  const l = randomInt(min||5,max||15)
   let s = randomWord()
   s = s.charAt(0).toUpperCase() + s.slice(1);
   for (let i=1;i<l;i++) {
     s += ' ' + randomWord()
   }
-  return s + '.'
+  return s + ((noPeriod===true)?'':'.')
 }
 
 export function randomWord() {

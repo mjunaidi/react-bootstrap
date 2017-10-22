@@ -4,3 +4,6 @@
   border:0;
   margin-bottom: 10px;
 }
+.card>.card-body{
+  padding:0.333rem;
+}

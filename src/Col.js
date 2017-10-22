@@ -12,11 +12,20 @@ class Col extends Component {
   }
   componentDidMount() {
     const elements = []
-    this.state.components.map((component,index)=>{
-      if (!component) return elements
-      if (component.type === 'Card') {
-        const element = <Card key={index} imgSrc={component.imgSrc} imgAlt={component.imgSrc} text={component.text}/>
-        elements.push(element)
+    this.state.components.map((c,i)=>{
+      if (!c) return elements
+      if (c.type === 'Card') {
+        const el = (
+          <Card
+            key={i}
+            imgSrc={c.imgSrc}
+            imgAlt={c.imgSrc}
+            title={c.title}
+            text={c.text}
+            updated={c.updated}
+          />
+        )
+        elements.push(el)
       }
       return elements
     })
