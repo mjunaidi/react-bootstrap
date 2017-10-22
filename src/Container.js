@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Jumbotron from './Jumbotron';
 import Row from './Row';
-import { randomSentence } from './util';
+import { randomSentence,timeAgo,randomDate } from './util';
 import './style.css';
 
 class Container extends Component {
@@ -15,7 +15,7 @@ class Container extends Component {
           imgAlt: '',
           title: randomSentence(3,5,false),
           text: randomSentence(),
-          updated: Date.now()
+          updated: timeAgo(randomDate())
         },
         {
           type: 'Card',
@@ -23,7 +23,7 @@ class Container extends Component {
           imgAlt: '',
           title: randomSentence(3,5,false),
           text: randomSentence(),
-          updated: Date.now()
+          updated: timeAgo(randomDate())
         },
         {
           type: 'Card',
@@ -31,7 +31,7 @@ class Container extends Component {
           imgAlt: '',
           title: randomSentence(3,5,false),
           text: randomSentence(),
-          updated: Date.now()
+          updated: timeAgo(randomDate())
         },
         {
           type: 'Card',
@@ -39,7 +39,7 @@ class Container extends Component {
           imgAlt: '',
           title: randomSentence(3,5,false),
           text: randomSentence(),
-          updated: Date.now()
+          updated: timeAgo(randomDate())
         },
         {
           type: 'Card',
@@ -47,7 +47,7 @@ class Container extends Component {
           imgAlt: '',
           title: randomSentence(3,5,false),
           text: randomSentence(),
-          updated: Date.now()
+          updated: timeAgo(randomDate())
         }
       ]
     };
