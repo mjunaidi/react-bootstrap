@@ -45,8 +45,8 @@ export function randomInt(min,max) {
   return Math.floor(Math.random() * (max - min)) + min
 }
 
-export function randomDate() {
-  const y = randomInt(2000,2017)
+export function randomDate(min,max) {
+  const y = randomInt(min||2000,max||2017)
   const m = randomInt(0,12)
   const d = randomInt(0,31)
   const h = randomInt(0,60)
@@ -56,27 +56,32 @@ export function randomDate() {
 }
 
 export function timeAgo(d){
-  const diff = (new Date() - d)/1000;
+  let diff = (new Date() - d)/1000;
+  const ago = diff>0?' ago':' to go'
+  if (diff<0) {
+    diff *= -1
+  }
   if(diff<60){
     const v = Math.round(diff)
-    return v + ' second' + (v===1?'':'s') + ' ago';
+    if (v===0) return 'just now'
+    return v + ' second' + (v===1?'':'s') + ago
   }
   else if(diff<60*60){
     const v = Math.round(diff/60)
-    return v + ' minute' + (v===1?'':'s') + ' ago';
+    return v + ' minute' + (v===1?'':'s') + ago
   }
   else if(diff<60*60*24){
     const v = Math.round(diff/(60*60))
-    return v + ' hour' + (v===1?'':'s') + ' ago';
+    return v + ' hour' + (v===1?'':'s') + ago
   }
   else if(diff<60*60*24*30.436875){
     const v = Math.round(diff/(60*60*24))
-    return v + ' day' + (v===1?'':'s') + ' ago';
+    return v + ' day' + (v===1?'':'s') + ago
   }
   else if(diff<60*60*24*30.436875*12){
     const v = Math.round(diff/(60*60*24*30.436875))
-    return v + ' month' + (v===1?'':'s') + ' ago';
+    return v + ' month' + (v===1?'':'s') + ago
   }
   const v = Math.round(diff/(60*60*24*30.436875*12))
-  return v + ' year' + (v===1?'':'s') + ' ago';
+  return v + ' year' + (v===1?'':'s') + ago
 }

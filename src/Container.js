@@ -15,7 +15,15 @@ class Container extends Component {
           imgAlt: '',
           title: randomSentence(3,5,false),
           text: randomSentence(),
-          updated: timeAgo(randomDate())
+          updated: timeAgo(randomDate(2017,2018))
+        },
+        {
+          type: 'Card',
+          imgSrc: 'https://picsum.photos/320/240/?random',
+          imgAlt: '',
+          title: randomSentence(3,5,false),
+          text: randomSentence(50,60),
+          updated: timeAgo(randomDate(2017,2018))
         },
         {
           type: 'Card',
@@ -23,7 +31,7 @@ class Container extends Component {
           imgAlt: '',
           title: randomSentence(3,5,false),
           text: randomSentence(),
-          updated: timeAgo(randomDate())
+          updated: timeAgo(randomDate(2017,2018))
         },
         {
           type: 'Card',
@@ -31,7 +39,7 @@ class Container extends Component {
           imgAlt: '',
           title: randomSentence(3,5,false),
           text: randomSentence(),
-          updated: timeAgo(randomDate())
+          updated: timeAgo(randomDate(2017,2018))
         },
         {
           type: 'Card',
@@ -39,15 +47,7 @@ class Container extends Component {
           imgAlt: '',
           title: randomSentence(3,5,false),
           text: randomSentence(),
-          updated: timeAgo(randomDate())
-        },
-        {
-          type: 'Card',
-          imgSrc: 'https://picsum.photos/320/240/?random',
-          imgAlt: '',
-          title: randomSentence(3,5,false),
-          text: randomSentence(),
-          updated: timeAgo(randomDate())
+          updated: timeAgo(randomDate(2017,2018))
         }
       ]
     };

@@ -7,3 +7,9 @@
 .card>.card-body{
   padding:0.333rem;
 }
+.card>.card-body>.card-title{
+  margin-bottom:0.25rem;
+}
+.card>.card-body>.card-text{
+  margin-bottom:0.2rem;
+}
